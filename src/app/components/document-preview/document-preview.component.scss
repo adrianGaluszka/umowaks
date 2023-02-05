@@ -1,0 +1,17 @@
+.document-wrapper {
+  box-shadow: -6px 6px 15px #707070;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  p.data-presenter {
+    position: relative;
+    overflow: hidden;
+    &.empty:after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      bottom: 0.4rem;
+      margin-left: 5px;
+      border-bottom: 2px dotted #000;
+    }
+  }
+}

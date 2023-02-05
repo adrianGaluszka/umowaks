@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-12">
+    <div class="header-wrapper">
+      <app-header></app-header>
+    </div>
+    <app-homepage></app-homepage>
+    <div class="container page-wrapper" #document>
+      <div class="row" *ngIf="!hideToolbar">
+        <div class="col-12">
+          <app-toolbar></app-toolbar>
+        </div>
+      </div>
+      <div class="row" id="document">
+        <div class="col-12">
+          <ng-container [ngSwitch]="mode$ | async">
+            <app-document-form *ngSwitchCase="'edit'"></app-document-form>
+            <app-document-preview *ngSwitchCase="'preview'"></app-document-preview>
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrapper">
+      <app-footer></app-footer>
+    </div>
+
+  </div>
+</div>

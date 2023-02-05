@@ -1,0 +1,10 @@
+<div class="toolbar-wrapper">
+  <div class="row">
+    <div class="col-12">
+      <ul *ngIf="(mode$ | async) as mode">
+        <li [ngClass]="{'active': mode  === formModeEnum.edit}" (click)="onClickEdit()">Edycja</li>
+        <li [ngClass]="{'active': mode  === formModeEnum.preview}" (click)="onClickPreview()">Podgląd</li>
+      </ul>
+    </div>
+  </div>
+</div>

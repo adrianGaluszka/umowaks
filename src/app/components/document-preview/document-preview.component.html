@@ -1,0 +1,114 @@
+<div class="document-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center"><h2>UMOWA KUPNA-SPRZEDAŻY</h2></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-5">
+            <p class="data-presenter empty">Umowa zawarta w dniu </p>
+          </div>
+          <div class="col-4">
+            <p class="data-presenter empty">w </p>
+          </div>
+          <div class="col-3">
+            <p class="data-presenter empty">o  godzinie </p>
+          </div>
+        </div>
+
+        <p>pomiędzy:</p>
+        <span>
+
+        </span>
+        <p class="data-presenter" [ngClass]="{'empty': !sellerData?.name}">Sprzedającym: {{sellerData?.name}}</p>
+        <p class="data-presenter" [ngClass]="{'empty': !sellerData?.street}">Ulica, miejscowość: {{sellerData?.street}} {{sellerData?.city}}</p>
+        <p class="data-presenter" [ngClass]="{'empty': !sellerData?.postCode}">Kod pocztowy: {{sellerData?.postCode}}</p>
+        <p class="data-presenter" [ngClass]="{'empty': !sellerData?.idCardNumber}">Dokument tożsamości nr: {{sellerData?.idCardNumber}}</p>
+        <p class="data-presenter" [ngClass]="{'empty': !sellerData?.idCardReleasedBy}">Wydany przez: {{sellerData?.idCardReleasedBy}}</p>
+        <div class="row">
+          <div class="col-6">
+            <p class="data-presenter" [ngClass]="{'empty': !sellerData?.pesel}">PESEL: {{sellerData?.pesel}}</p>
+          </div>
+          <div class="col-6">
+            <p class="data-presenter" [ngClass]="{'empty': !sellerData?.nip}">NIP: {{sellerData?.nip}}</p>
+          </div>
+        </div>
+        <p class="data-presenter empty">a Kupującym:</p>
+        <p class="data-presenter empty">Ulica, miejscowość:</p>
+        <p class="data-presenter empty">Kod pocztowy:</p>
+        <p class="data-presenter empty">Dokument tożsamości nr:</p>
+        <p class="data-presenter empty">Wydany przez:</p>
+        <div class="row">
+          <div class="col-6">
+            <p class="data-presenter empty">PESEL: </p>
+          </div>
+          <div class="col-6">
+            <p class="data-presenter empty">NIP: </p>
+          </div>
+        </div>
+
+        <p class="text-center"><b>§1</b></p>
+        <p>Przedmiotem umowy jest sprzedaż pojazdu:</p>
+        <div class="row">
+          <div class="col-6">
+            <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.marka}">marka: {{vehicleInformation?.marka}}</p>
+          </div>
+          <div class="col-6">
+            <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.prodYear}">rok produkcji: {{vehicleInformation?.prodYear}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.engineNumber}">nr silnika: {{vehicleInformation?.engineNumber}}</p>
+          </div>
+          <div class="col-8">
+            <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.bodyNumber}">nr podwozia: {{vehicleInformation?.bodyNumber}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.nrRejestracyjny}">nr rejestracyjny: {{vehicleInformation?.nrRejestracyjny}}</p>
+          </div>
+          <div class="col-6">
+            <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.mileage}">przebieg: {{vehicleInformation?.mileage}}</p>
+          </div>
+        </div>
+        <p class="data-presenter" [ngClass]="{'empty': !vehicleInformation?.additionalInformation}">Dodatkowe ustalenia: {{vehicleInformation?.additionalInformation}}</p>
+
+        <p class="text-center"><b>§2</b></p>
+        <p>Sprzedający oświadcza, że pojazd będący przedmiotem umowy stanowi jego własność, jest wolny od
+          wad prawnych oraz praw osób trzecich, iż nie toczy się żadne postępowanie, którego przedmiotem jest
+          ten pojazd, że nie stanowi on również przedmiotu zabezpieczenia.</p>
+
+          <p class="text-center"><b>§3</b></p>
+          <p class="data-presenter empty">Strony ustaliły wartość przedmiotu umowy na kwotę: </p>
+          <p class="data-presenter empty">słownie: </p>
+
+          <p class="text-center"><b>§4</b></p>
+          <p>Sprzedający przenosi na rzecz kupującego własność pojazdu określonego w §1 niniejszej umowy na
+            kwotę określoną w §3 niniejszej umowy, której otrzymanie sprzedający kwituje. Kupujący kwituje
+            jednocześnie odbiór ww. pojazdu.
+          </p>
+
+          <p class="text-center"><b>§5</b></p>
+          <p>Kupujący oświadcza, że stan techniczny pojazdu jest mu znany</p>
+
+          <p class="text-center"><b>§6</b></p>
+          <p>Strony ustaliły, że wszelkiego rodzaju koszty transakcji wynikające z realizacji ustaleń niniejszej umowy
+            oraz koszty opłaty skarbowej obciążają kupującego.
+          </p>
+
+          <p class="text-center"><b>§7</b></p>
+          <p>W sprawach nie uregulowanych w niniejszej umowie zastosowanie mają obowiązujące w tym
+            zakresie przepisy kodeksu cywilnego.
+          </p>
+
+          <p class="text-center"><b>§8</b></p>
+          <p>Niniejszą umowę sporządzono w dwóch jednobrzmiących egzemplarzach, po jednym dla każdej
+            ze stron.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
