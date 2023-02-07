@@ -1,4 +1,5 @@
 export enum formMode{
   edit = 'edit',
-  preview = 'preview'
+  preview = 'preview',
+  print = 'print'
 }

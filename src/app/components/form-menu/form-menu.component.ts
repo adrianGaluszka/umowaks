@@ -4,11 +4,11 @@ import { formMode } from 'src/app/enums/form-modes.enum';
 import { ToolbarService } from 'src/app/services/toolbar.service';
 
 @Component({
-  selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  selector: 'app-form-menu',
+  templateUrl: './form-menu.component.html',
+  styleUrls: ['./form-menu.component.scss']
 })
-export class ToolbarComponent implements OnInit {
+export class FormMenuComponent implements OnInit {
 
   formModeEnum = formMode;
 

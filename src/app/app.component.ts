@@ -1,6 +1,8 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { formMode } from './enums/form-modes.enum';
+import { DocumentService } from './services/document.service';
 import { ToolbarService } from './services/toolbar.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { ToolbarService } from './services/toolbar.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'umowaks';
   hideToolbar: boolean = true;
 
@@ -33,5 +35,33 @@ export class AppComponent {
     return this.toolbarService.getModeValue$();
   }
 
-  constructor(private readonly toolbarService: ToolbarService) {}
+  constructor(
+    private readonly toolbarService: ToolbarService,
+    private readonly documentService: DocumentService,
+    private readonly sanitizer: DomSanitizer
+    ) {}
+
+    ngOnInit(): void {
+        this.toolbarService.getModeValue$().subscribe(mode => {
+          console.log(mode);
+          switch(mode) {
+            case formMode.preview: {
+              this.documentService.generateDocument();
+            }
+          }
+        })
+    }
+
+    getDocumentUrl(): SafeHtml {
+      const url = this.documentService.getDocumentUrl() + '#view=Fit&toolbar=0&navpanes=0&scrollbar=0'
+      console.log(url);
+
+      return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+
+    // getIframeHeight(el: HTMLIFrameElement) {
+    //   console.log(el.contentWindow?.document.body.heig);
+
+    //   return el.style.height = el.contentWindow?.document.body.offsetHeight + 'px';
+    // }
 }

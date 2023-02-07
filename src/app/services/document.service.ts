@@ -9,6 +9,8 @@ import { BehaviorSubject, Observable } from "rxjs";
 
 export class DocumentService {
 
+  documentUrl: any;
+
   private _formData: any;
   private formValues: BehaviorSubject<{seller: null, vehicleInformation: null}> = new BehaviorSubject({seller: null, vehicleInformation: null})
   private noInputSectionsLineSpace: number = 4;
@@ -32,7 +34,17 @@ export class DocumentService {
    return this.formValues.asObservable();
   }
 
+  getDocumentUrl(): string {
+    if(!this.documentUrl) {
+      return '';
+    }
+    return this.documentUrl;
+    // return URL.createObjectURL(this.documentUrl);
+  }
+
   generateDocument() {
+    console.log('GENERATE');
+
     const doc = new jsPDF()
     const width = doc.internal.pageSize.getWidth()
     const currentyear = new Date().getFullYear();
@@ -161,6 +173,12 @@ export class DocumentService {
     doc.text('Kupujący', width/4, 289, {align: 'center'})
     doc.text('Sprzedający', (width/4) * 3, 289, {align: 'center'});
 
-    doc.output('dataurlnewwindow')
+    // doc.output('dataurlnewwindow')
+    const blobPDF = new Blob([doc.output('blob')], {type: 'application/pdf'});
+    this.documentUrl = URL.createObjectURL(blobPDF);
+    // console.log(doc.output('datauri'));
+    // console.log(doc.output('bloburl'));
+    // console.log(this.documentUrl);
+
   }
 }

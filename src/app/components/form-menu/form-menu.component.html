@@ -4,6 +4,7 @@
       <ul *ngIf="(mode$ | async) as mode">
         <li [ngClass]="{'active': mode  === formModeEnum.edit}" (click)="onClickEdit()">Edycja</li>
         <li [ngClass]="{'active': mode  === formModeEnum.preview}" (click)="onClickPreview()">Podgląd</li>
+        <li [ngClass]="{'active': mode  === formModeEnum.print}" (click)="onClickPreview()">Drukuj</li>
       </ul>
     </div>
   </div>

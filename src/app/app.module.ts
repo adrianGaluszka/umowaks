@@ -10,7 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { FormMenuComponent } from './components/form-menu/form-menu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     HomepageComponent,
     FooterComponent,
     HeaderComponent,
-    ToolbarComponent
+    FormMenuComponent
   ],
   imports: [
     BrowserModule,

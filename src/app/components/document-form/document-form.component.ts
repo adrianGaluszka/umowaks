@@ -43,7 +43,7 @@ export class DocumentFormComponent implements OnInit {
     })
   }
 
-  onPrintPreview(): void {
-    this.documentService.generateDocument();
-  }
+  // onPrintPreview(): void {
+  //   this.documentService.generateDocument();
+  // }
 }
