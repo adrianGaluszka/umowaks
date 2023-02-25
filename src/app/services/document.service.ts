@@ -44,6 +44,8 @@ export class DocumentService {
 
   generateDocument() {
     console.log('GENERATE');
+    console.log(this._formData);
+
 
     const doc = new jsPDF()
     const width = doc.internal.pageSize.getWidth()

@@ -1,4 +1,19 @@
+.header-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 .page-wrapper {
   min-height: 100vh;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  #document {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: -6px 6px 15px #707070;
+    margin: 20px;
+    padding: 30px;
+    width: 100%;
+  }
 }

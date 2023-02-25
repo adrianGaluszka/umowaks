@@ -37,7 +37,7 @@ export class DocumentFormComponent implements OnInit {
     private documentService: DocumentService) { }
 
   ngOnInit(): void {
-
+    this.documentService.setFormData(this.documentForm.value)
     this.documentForm.valueChanges.subscribe(res => {
       this.documentService.setFormData(res)
     })

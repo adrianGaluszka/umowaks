@@ -18,7 +18,7 @@ export class HomepageComponent implements OnInit {
   }
 
   onFillIn() {
-    const offsetPosition = document.getElementById('document')!?.offsetTop - 62;
+    const offsetPosition = document.getElementById('document')!?.offsetTop - 150;
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'

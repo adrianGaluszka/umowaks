@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   @ViewChild('document') document!: ElementRef<HTMLElement>;
   @HostListener('window:scroll', ['$event'])
   public onWindowScroll(event: Event): void {
-    if (this.document?.nativeElement.offsetTop - 100 < window.scrollY) {
+    if (this.document?.nativeElement.offsetTop - 151 < window.scrollY) {
       console.log('visible');
       this.hideToolbar = false;
     } else {
